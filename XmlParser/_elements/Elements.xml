@@ -1,0 +1,95 @@
+﻿<!-- Info ======================================================
+  
+    Подключение ресурсов:
+    
+    - Подключаются через пространства имен XML (можно использовать полный или относительный путь)
+    - Для размещения корневого элемента нужно указать x:Root (x - псевдоним пространства имен)
+  
+    Правила именования элементов:
+    
+    - Нельзя давать одинаковые имена элементам одного уровня
+    - Элементы не могут содержать имя как у своего родителя
+    - Корневые элементы используемых файлов не могут содержать одинаковые имена
+  
+    Допустимые атрибуты (регистр не важен):
+    
+    - x, XPath              - XPath элемента
+    - NoParentXpath         - Элемент не будет сцеплять свой XPath с родительским
+    - IsCollection          - Будут созданы классы TElement и ElementCollection<TElement>,
+                              елемент TElement будет автоматически использовать аттрибут IsParent
+    - IsParent              - Дочерние элементы первого уровня автоматически используют NoParentXpath,
+                              их поиск будет осуществляться от родителя (через FindChild() / .FindChildren())
+    - NoParent              - Если у какого-либо вышестоящего элемента используется атрибут IsParent,
+                              элемент его проигнорирует (будет использовать FindElement())
+    - Comment               - Добавляет документирующий комментарий (для подсказок IntelliSense)
+
+==== Info ======================================================-->
+
+<Elements xmlns:popups="Resources\Popups.xml"
+          xmlns:this="Elements.xml"
+          xmlns:wall="Resources\Wall.xml"
+          xmlns:buttons="Resources\Buttons.xml"
+          xmlns:comments="Resources\Comments.xml">
+
+  <popups:Root />
+  <wall:Root />
+
+  <buttons:Widgets.LikeBtn />
+
+  <Items x="//Parent">
+    <buttons:Widgets.LikeBtn />
+    <wall:PostItem />
+    <Item1 x="//Item1" />
+    <Item2 x="//Item2" />
+  </Items>
+
+  <Parent1 x="//Parent" IsParent="1">
+    <Child1 x="//Child1" />
+    <Child2 x="//Child2" NoParent="1" />
+    <Child3 x="//Child3" NoParentXPath="1" />
+    <wall:PostItem NoParent="1" />
+  </Parent1>
+
+  <Parent2 x="//Parent">
+    <Child1 x="//Child1" />
+    <Child2 x="//Child2" NoParent="1" />
+    <Child3 x="//Child3" NoParentXPath="1" />
+  </Parent2>
+
+  <City x="0">
+    <wall:PostItem />
+    <wall:Root />
+    <TestItem1 x="x" IsCollection="1" />
+
+    <Moscow x="x" IsParent="1">
+      <wall:PostItem />
+      <TestItem x="x" IsCollection="1" NoParent="" />
+      <One x="x" />
+      <Two x="x" IsParent="1">
+        <wall:PostItem />
+        <A x="x" />
+        <B x="x" NoParent="1" />
+      </Two>
+    </Moscow>
+
+    <London x="x">
+      <One x="x" />
+      <Two x="x" IsCollection="1">
+        <A x="x" />
+        <B x="x" NoParent="1" />
+        <C x="x" IsCollection="1">
+          <Item1 />
+          <Item2 NoParent="1" />
+        </C>
+      </Two>
+    </London>
+
+  </City>
+
+  <LoginPage Comment="коммент">
+    <LoginField x="//LoginField" />
+    <PasswordField x="//PasswordField" />
+    <LoginBtn x="//LoginBtn" />
+  </LoginPage>
+
+</Elements>

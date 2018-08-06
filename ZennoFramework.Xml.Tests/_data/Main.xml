@@ -1,0 +1,123 @@
+﻿<Main xmlns:this="Main.xml">
+
+  <Items x="//Items">
+    <Item1 x="//Item1" />
+    <Item2 x="//Item2" NoParent="1" />
+    <Item3 x="//Item3" NoParentXPath="1" />
+    <Item4 x="//Item4" NoParent="1" NoParentXPath="1" />
+    <Item5 x="//Item5" IsCollection="1" />
+    <Item6 x="//Item6" IsCollection="1" NoParent="1" />
+    <Item7 x="//Item7" IsCollection="1" NoParentXPath="1" />
+    <Item8 x="//Item8" IsCollection="1" NoParent="1" NoParentXPath="1" />
+    <Item9 x="//Item9" IsParent="1" />
+    <Item10 x="//Item10" IsParent="1" NoParent="1" />
+    <Item11 x="//Item11" IsParent="1" NoParentXPath="1" />
+    <Item12 x="//Item12" IsParent="1" NoParent="1" NoParentXPath="1" />
+  </Items>
+
+  <Container1 x="//Container1">
+    <this:Items.Item1 />
+    <this:Items.Item2 />
+    <this:Items.Item3 />
+    <this:Items.Item4 />
+    <this:Items.Item5 />
+    <this:Items.Item6 />
+    <this:Items.Item7 />
+    <this:Items.Item8 />
+    <this:Items.Item9 />
+    <this:Items.Item10 />
+    <this:Items.Item11 />
+    <this:Items.Item12 />
+  </Container1>
+
+  <Container2 x="//Container2">
+    <this:Items.Item1 NoParent="1" />
+    <this:Items.Item2 NoParent="1" />
+    <this:Items.Item3 NoParent="1" />
+    <this:Items.Item4 NoParent="1" />
+    <this:Items.Item5 NoParent="1" />
+    <this:Items.Item6 NoParent="1" />
+    <this:Items.Item7 NoParent="1" />
+    <this:Items.Item8 NoParent="1" />
+    <this:Items.Item9 NoParent="1" />
+    <this:Items.Item10 NoParent="1" />
+    <this:Items.Item11 NoParent="1" />
+    <this:Items.Item12 NoParent="1" />
+  </Container2>
+
+  <Container3 x="//Container3">
+    <this:Items.Item1 NoParentXPath="1" />
+    <this:Items.Item2 NoParentXPath="1" />
+    <this:Items.Item3 NoParentXPath="1" />
+    <this:Items.Item4 NoParentXPath="1" />
+    <this:Items.Item5 NoParentXPath="1" />
+    <this:Items.Item6 NoParentXPath="1" />
+    <this:Items.Item7 NoParentXPath="1" />
+    <this:Items.Item8 NoParentXPath="1" />
+    <this:Items.Item9 NoParentXPath="1" />
+    <this:Items.Item10 NoParentXPath="1" />
+    <this:Items.Item11 NoParentXPath="1" />
+    <this:Items.Item12 NoParentXPath="1" />
+  </Container3>
+
+  <Container5 x="//Container5" IsParent="1">
+    <this:Items.Item1 />
+    <this:Items.Item2 />
+    <this:Items.Item3 />
+    <this:Items.Item4 />
+    <this:Items.Item5 />
+    <this:Items.Item6 />
+    <this:Items.Item7 />
+    <this:Items.Item8 />
+    <this:Items.Item9 />
+    <this:Items.Item10 />
+    <this:Items.Item11 />
+    <this:Items.Item12 />
+  </Container5>
+
+  <Container6 x="//Container6" IsCollection="1">
+    <this:Items.Item1 />
+    <this:Items.Item2 />
+    <this:Items.Item3 />
+    <this:Items.Item4 />
+    <this:Items.Item5 />
+    <this:Items.Item6 />
+    <this:Items.Item7 />
+    <this:Items.Item8 />
+    <this:Items.Item9 />
+    <this:Items.Item10 />
+    <this:Items.Item11 />
+    <this:Items.Item12 />
+  </Container6>
+
+  <Container7 x="//Container7" IsParent="1">
+    <this:Items.Item1 NoParent="1" />
+    <this:Items.Item2 NoParent="1" />
+    <this:Items.Item3 NoParent="1" />
+    <this:Items.Item4 NoParent="1" />
+    <this:Items.Item5 NoParent="1" />
+    <this:Items.Item6 NoParent="1" />
+    <this:Items.Item7 NoParent="1" />
+    <this:Items.Item8 NoParent="1" />
+    <this:Items.Item9 NoParent="1" />
+    <this:Items.Item10 NoParent="1" />
+    <this:Items.Item11 NoParent="1" />
+    <this:Items.Item12 NoParent="1" />
+  </Container7>
+
+  <Container8 x="//Container8" IsCollection="1">
+    <this:Items.Item1 NoParent="1" />
+    <this:Items.Item2 NoParent="1" />
+    <this:Items.Item3 NoParent="1" />
+    <this:Items.Item4 NoParent="1" />
+    <this:Items.Item5 NoParent="1" />
+    <this:Items.Item6 NoParent="1" />
+    <this:Items.Item7 NoParent="1" />
+    <this:Items.Item8 NoParent="1" />
+    <this:Items.Item9 NoParent="1" />
+    <this:Items.Item10 NoParent="1" />
+    <this:Items.Item11 NoParent="1" />
+    <this:Items.Item12 NoParent="1" />
+  </Container8>
+
+</Main>

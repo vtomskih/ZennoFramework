@@ -1,0 +1,18 @@
+﻿<Comments xmlns:buttons="Buttons.xml">
+
+  <CommentBlock x="//CommentBlock">
+
+    <CommentItem x="//CommentItem" IsCollection="1">
+      <Message x="//Message" />
+      <ReplyBtn x="//ReplyBtn" />
+      <buttons:LikeBtn />
+    </CommentItem>
+
+    <AddComment x="//AddComment">
+      <MessageField x="//MessageField" />
+      <SendCommentBtn x="//SendCommentBtn" />
+    </AddComment>
+
+  </CommentBlock>
+
+</Comments>

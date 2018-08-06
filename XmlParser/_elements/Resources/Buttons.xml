@@ -1,0 +1,12 @@
+﻿<Buttons xmlns:this="Buttons.xml">
+
+  <LikeBtn x="//LikeBtn" />
+  <RepostBtn x="//RepostBtn" />
+
+  <Widgets x="//Widgets">
+    <this:LikeBtn />
+    <this:RepostBtn />
+    <CommentBtn x="//CommentBtn" />
+  </Widgets>
+
+</Buttons>

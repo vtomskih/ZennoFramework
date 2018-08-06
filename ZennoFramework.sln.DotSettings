@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/Exe/Arguments/@EntryValue">50606 "C:\Program Files (x86)\ZennoLab\RU\ZennoPoster Pro\5.16.2.0\Progs\ExternalAssemblies\TestBot.dll" external -sp "C:\Users\UserZ\AppData\Roaming\ZennoLab\ZennoPoster\5"</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/Name/@EntryValue">ZennoLab.CodeRunner</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/Type/@EntryValue">exe</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/Exe/Executable/@EntryValue">C:\Program Files (x86)\ZennoLab\RU\ZennoPoster Pro\5.16.2.0\Progs\ZennoLab.CodeRunner.exe</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=49998031CD0E994C990F1477E3530CBE/Exe/WorkingDirectory/@EntryValue">C:\Program Files (x86)\ZennoLab\RU\ZennoPoster Pro\5.16.2.0\Progs</s:String></wpf:ResourceDictionary>

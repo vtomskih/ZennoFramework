@@ -1,0 +1,8 @@
+﻿<Popups xmlns:buttons="Buttons.xml">
+
+  <PostPopup x="//PostPopup">
+    <Text x="//Text" />
+    <buttons:Widgets.LikeBtn />
+  </PostPopup>
+
+</Popups>

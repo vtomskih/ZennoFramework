@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{651009E1-3FFC-4705-AC86-C6EFAB47383E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XmlParser</RootNamespace>
+    <AssemblyName>XmlParser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_elements\Elements.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Elements.cs</LastGenOutput>
+    </Content>
+    <Content Include="_elements\Resources\Wall.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_elements\Resources\Comments.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_elements\Resources\Buttons.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_elements\Resources\Popups.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_elements\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Compile Include="_elements\Elements.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Elements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZennoFramework.Api.Common\ZennoFramework.Api.Common.csproj">
+      <Project>{EB070602-106D-4957-AA18-ABA7D95E3CF1}</Project>
+      <Name>ZennoFramework.Api.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZennoFramework.Xml\ZennoFramework.Xml.csproj">
+      <Project>{95db1aa3-bd52-49c1-98b2-f2f6b02662f3}</Project>
+      <Name>ZennoFramework.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZennoFramework.Generator\ZennoFramework.Generator.csproj">
+      <Project>{dc51c28c-4d0d-43dc-87fe-ce680bb89db9}</Project>
+      <Name>ZennoFramework.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZennoFramework\ZennoFramework.csproj">
+      <Project>{02b70f05-d77d-4453-9fbe-ffd6f7f494c5}</Project>
+      <Name>ZennoFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

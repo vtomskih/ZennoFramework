@@ -1,0 +1,24 @@
+﻿<#@ assembly name="D:\Dev\ZennoFramework\ZennoFramework.Xml\bin\Debug\ZennoFramework.Xml.dll"  #>
+<#@ assembly name="D:\Dev\ZennoFramework\ZennoFramework.Generator\bin\Debug\net45\ZennoFramework.Generator.dll"  #>
+<#@ assembly name="D:\Dev\ZennoFramework\ZennoFramework.Generator\bin\Debug\net45\ZennoFramework.Api.Common.dll"  #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="ZennoFramework.Api.Common.Messages" #>
+<#@ import namespace="ZennoFramework.Xml" #>
+<#@ import namespace="ZennoFramework.Xml.Extensions" #>
+<#@ import namespace="ZennoFramework.Xml.Validation" #>
+<#
+        var xmlPath = @"D:\Dev\ZennoFramework\XmlParser\_elements\Elements.xml";
+        var elementsNamespace = "MyBotNamespace.Generated";
+        //var generator = new ZennoFramework.Xml.Generator("2X1Q-GG2T-6C59");
+        //return generator.GenerateElements(xmlPath, elementsNamespace);
+
+        var docs = Loader.Load(xmlPath);
+        Validator.CheckDocuments(docs);
+        LocatorRenderer.Run(docs);
+        var docsString = docs.Values.Select(x => x.Save());
+        var data = new GenerationData {Namespace = elementsNamespace, XmlDocuments = docsString};
+        return ZennoFramework.Generator.CodeGenerator.Generate(data);
+#>

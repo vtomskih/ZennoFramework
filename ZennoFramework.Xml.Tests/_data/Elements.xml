@@ -1,0 +1,9 @@
+﻿<Elements xmlns:Main="Main.xml"
+          xmlns:popups="Resources\Popups.xml"
+          xmlns:wall="Resources\Wall.xml"
+          xmlns:Buttons="Resources\Buttons.xml">
+
+  <popups:Root />
+  <wall:Root />
+
+</Elements>

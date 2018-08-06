@@ -1,0 +1,10 @@
+﻿<Wall xmlns:buttons="Buttons.xml"
+      xmlns:comments="Comments.xml">
+
+  <PostItem x="//PostItem" IsCollection="1">
+    <Text x="//Text" />
+    <buttons:Widgets.LikeBtn />
+    <comments:CommentBlock />
+  </PostItem>
+
+</Wall>
